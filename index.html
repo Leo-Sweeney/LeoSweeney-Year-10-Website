@@ -9,6 +9,14 @@
 <body>
     <h1>Cheese Simulator 1.0</h1>
 
+    <h2>
+        How To Play
+    </h2>
+
+    <p>
+        You have encountered some cheese... You must attack and defeat it!
+    </p>
+
     <img src="Cheese.jpg" alt="Image Of Cheese">
     <h6>Ashish5513 - Wikimedia Commons - CC BY-SA 4.0</h6>
 
@@ -16,8 +24,11 @@
 
     <h2>Cheese Health Bar</h2>
 
-    <progress id="health" value="100" max="100" min="0"></progress> </progress>
-    <button class="attackbutton">Attack</button>
+    <div class="progress">
+        <div class="progress__fill"></div>
+        <div class="spanProgress__text">25%</div>
+    </div>
+    <button onclick="attack()" class="attackbutton">Attack</button>
 
     <br>
     <br>
