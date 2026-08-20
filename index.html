@@ -26,9 +26,18 @@
 
     <div class="progress">
         <div class="progress__fill"></div>
-        <div class="spanProgress__text">25%</div>
+        <div class="spanProgress__text">0%</div>
     </div>
     <button onclick="attack()" class="attackbutton">Attack</button>
+
+    <script>
+        function updateProgressBar(progressBar, value) {
+            progressBar.querySelector(".progress__fill").style.width `${value}%`;
+            progressBar.querySelector(".progress__text").textContent `${value}%`;
+            const progressBar = document.querySelector(".progress");
+            updateProgressBar(progressBar, 29);
+        }
+    </script>
 
     <br>
     <br>
