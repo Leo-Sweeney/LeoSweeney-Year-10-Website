@@ -25,18 +25,18 @@
     <h2>Cheese Health Bar</h2>
 
     <div class="progress">
-        <div class="progress__fill"></div>
-        <div class="spanProgress__text">0%</div>
+        <div class="progress__fill" style="width: 100%;"></div>
+        <span class="progress__text">100%</span>
     </div>
-    <button onclick="attack()" class="attackbutton">Attack</button>
+    <button onclick="updateProgressBar(progressBar, 10)" class="attackbutton">Attack</button>
 
     <script>
         function updateProgressBar(progressBar, value) {
-            progressBar.querySelector(".progress__fill").style.width `${value}%`;
-            progressBar.querySelector(".progress__text").textContent `${value}%`;
-            const progressBar = document.querySelector(".progress");
-            updateProgressBar(progressBar, 29);
+            progressBar.querySelector(".progress__fill").style.width = `${value}%`;
+            progressBar.querySelector(".progress__text").textContent = `${value}%`;
         }
+
+        const progressBar = document.querySelector(".progress");
     </script>
 
     <br>
