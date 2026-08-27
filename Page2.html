@@ -4,15 +4,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="secondpage">
-    <h1 class="secondpageh1">Tragic Backstory!</h1>
+<body>
+    <h1>You Have Defeated The Cheese!</h1>
 
-    <img src="Mouse_in_snow.jpg" alt="Mouse In The Snow">
-    <h6>Alex Kard - Wikimedia Commons - CC0 1.0</h6>
+    <h2 id="mouseothertext" >But At What Cost?</h2>
 
+    <button id="mousebutton" onclick="showMouseImage()" class="normalbutton">
+        Learn The Consequences Of Your Actions...
+    </button>
 
+    <img id="mouseimage" style="display: none" src="Mouse_in_snow.jpg" alt="Mouse In The Snow">
+    <h6 id="mouseimagetext" style="display: none" >Alex Kard - Wikimedia Commons - CC0 1.0</h6>
 
-    <a href="index.html">
-    <button class="lorebutton">Return</button>
-    </a>
+    <script>
+        function showMouseImage(){
+            document.getElementById("mouseimage").style.display = "block";
+            document.getElementById("mouseimagetext").style.display = "block";
+            document.getElementById("mousebutton").style.display = "none";
+            document.getElementById("mouseothertext").textContent = "This is [name of mouse]... And you just destroyed his only source of food."
+        }
+    </script>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>

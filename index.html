@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <h1>Cheese Simulator 1.0</h1>
+    <h1>Cheese Simulator 1.2</h1>
 
     <h2>
         How To Play
@@ -17,7 +17,8 @@
         You have encountered some cheese... You must attack and defeat it!
     </p>
 
-    <img src="Cheese.jpg" alt="Image Of Cheese">
+    <img id="cheeseimage" src="Cheese.jpg" alt="Image Of Cheese" style="display: block;">
+    <img id="deadcheeseimage" src="Dead_Cheese.png" alt="Image Of Dead Cheese" style="display: none;">
     <h6>Ashish5513 - Wikimedia Commons - CC BY-SA 4.0</h6>
 
     <br>
@@ -28,12 +29,21 @@
         <div class="progress__fill" style="width: 100%;"></div>
         <span class="progress__text">100%</span>
     </div>
-    <button onclick="updateProgressBar(progressBar, 10)" class="attackbutton">Attack</button>
+    <button onclick="if(progressBarValue > -10) {updateProgressBar(progressBar, 10)}" class="attackbutton">Attack</button>
 
     <script>
+        let progressBarValue = 90;
+
         function updateProgressBar(progressBar, value) {
-            progressBar.querySelector(".progress__fill").style.width = `${value}%`;
-            progressBar.querySelector(".progress__text").textContent = `${value}%`;
+            progressBar.querySelector(".progress__fill").style.width = `${progressBarValue}%`;
+            progressBar.querySelector(".progress__text").textContent = `${progressBarValue}%`;
+            progressBarValue = progressBarValue - 10;
+
+            if(progressBarValue == -10){
+            document.getElementById("cheeseimage").style.display = "none";
+            document.getElementById("deadcheeseimage").style.display = "block";
+            document.getElementById("continuebutton").style.display = "block";
+            }
         }
 
         const progressBar = document.querySelector(".progress");
@@ -45,7 +55,7 @@
     <br>
 
     <a href="Page2.html">
-        <button class="lorebutton">Click To Learn The Lore...</button>
+        <button id="continuebutton"  class="pagebutton">Continue To Next Level</button>
     </a>
 </body>
 </html>
