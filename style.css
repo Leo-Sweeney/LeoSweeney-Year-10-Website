@@ -125,3 +125,25 @@ p {
     margin-left: auto;
     margin-right: auto;
 }
+
+.mice {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(162, 238, 238, 0.876);
+    border-radius: 15px;
+    border-style: solid;
+    gap: 20px;
+    justify-content: center;
+}
+
+.miceimages {
+    width: 200px;
+    margin: 10px;
+}
+
+.yesno {
+    display: flex;
+    flex-direction: row;
+
+}

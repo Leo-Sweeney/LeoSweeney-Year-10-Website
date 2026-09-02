@@ -16,12 +16,48 @@
     <img id="mouseimage" style="display: none" src="Mouse_in_snow.jpg" alt="Mouse In The Snow">
     <h6 id="mouseimagetext" style="display: none" >Alex Kard - Wikimedia Commons - CC0 1.0</h6>
 
+    <h2 style="display: none" id="micefamilytext">
+        Next stop on the guilt trip: Franklin's family!
+    </h2>
+
+    <div style="display: none" id="micefamily" class="mice">
+        <img class="miceimages" src="Mouse_1.jpg" alt="Mouse_1">
+        <img class="miceimages" src="Mouse_2.jpg" alt="Mouse_2">
+        <img class="miceimages" src="Mouse_3.jpg" alt="Mouse_3">
+        <img class="miceimages" src="Mouse_4.jpg" alt="Mouse_4">
+    </div>
+
+    <h2 style="display: none" id="micefamilytext2">
+        They all have names of course but as their murderer, you're not deserving of that information
+    </h2>
+
+    <a href="Page3.html">
+        <button style="display: none" id="nextbutton" class="normalbutton">
+            Redeem Yourself?
+        </button>
+    </a>
+
+    <h6 style="display: none" id="micesources">
+        George Shuklin - Wikimedia Commons - CC BY-SA 1.0
+        <br>
+        Dion Art - Wikimedia Commons - CC BY-SA 4.0
+        <br>
+        Bo Mertz - Wikimedia Commons - CC BY-SA 2.0
+        <br>
+        Celestin Billeter - Wikimedia Commons - CC BY-SA 4.0
+    </h6>
+
     <script>
         function showMouseImage(){
             document.getElementById("mouseimage").style.display = "block";
             document.getElementById("mouseimagetext").style.display = "block";
             document.getElementById("mousebutton").style.display = "none";
-            document.getElementById("mouseothertext").textContent = "This is [name of mouse]... And you just destroyed his only source of food."
+            document.getElementById("micesources").style.display = "block";
+            document.getElementById("micefamily").style.display = "flex";
+            document.getElementById("micefamilytext").style.display = "block";
+            document.getElementById("micefamilytext2").style.display = "block";
+            document.getElementById("nextbutton").style.display = "block";
+            document.getElementById("mouseothertext").textContent = "This is Franklin... And you just destroyed his only source of food!"
         }
     </script>
 

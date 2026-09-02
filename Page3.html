@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="Page3text">
+        So... You Want To Fix Your Horrific Crime?
+    </h1>
+
+    <div class="yesno">
+        <button onclick="yes()" id="yesbutton" class="normalbutton"> 
+        Yes!
+        </button>
+
+        <button onclick="no()" id="nobutton" class="normalbutton">
+        No!
+        </button>
+    </div>
+
+    <a>
+        <button class="normalbutton" id="yesnextpage" style="display: none">Make Cheese!</button>
+    </a>
+
+    <script>
+        function yes(){
+            document.getElementById("Page3text").textContent = "Well... I suppose you could make them some new cheese."
+            document.getElementById("nobutton").style.display = "none";
+            document.getElementById("yesbutton").style.display = "none";
+            document.getElementById("yesnextpage").style.display = "block";
+        }
+
+        function no(){
+            document.getElementById("Page3text").textContent = "Then Just Leave! You've done enough damage."
+            document.getElementById("yesbutton").style.display = "none";
+            document.getElementById("nobutton").style.display = "none";
+        }
+    </script>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
