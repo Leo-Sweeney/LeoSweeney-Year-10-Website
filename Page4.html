@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Press  E  To make cheese</h1>
+
+     <div class="progress">
+        <div class="progress__fill" style="width: 0%;"></div>
+        <span class="progress__text">0%</span>
+    </div>
+
+    <script>
+        let progressBarValue = 10;
+
+        if(document.addEventListener('keydown', (e) => {
+            addToProgressBar(progressBar, 10);
+            console.log(`Pressed ${e.key}`);
+        }));
+
+        function addToProgressBar(progressBar, value) {
+            progressBar.querySelector(".progress__fill").style.width = `${progressBarValue}%`;
+            progressBar.querySelector(".progress__text").textContent = `${progressBarValue}%`;
+            progressBarValue = progressBarValue + 10;
+
+            if(progressBarValue == -10){
+            document.getElementById("cheeseimage").style.display = "none";
+            document.getElementById("deadcheeseimage").style.display = "block";
+            document.getElementById("continuebutton").style.display = "block";
+            }
+
+            while(progressBarValue == 11) {
+                progressBarValue - 0.1;
+            }
+
+            const progressBar = document.querySelector(".progress");
+        }
+
+
+       
+    </script>
+</body>
