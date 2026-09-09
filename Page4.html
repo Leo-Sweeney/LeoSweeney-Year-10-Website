@@ -15,9 +15,8 @@
     <script>
         let progressBarValue = 10;
 
-        if(document.addEventListener('keydown', (e) => {
-            addToProgressBar(progressBar, 10);
-            console.log(`Pressed ${e.key}`);
+        if (document.addEventListener('keydown', (e) => {
+        addToProgressBar(progressBar, 10);
         }));
 
         function addToProgressBar(progressBar, value) {
@@ -31,12 +30,12 @@
             document.getElementById("continuebutton").style.display = "block";
             }
 
-            while(progressBarValue == 11) {
-                progressBarValue - 0.1;
-            }
+            //while(progressBarValue == 11) {
+            //    progressBarValue - 0.1;
+            //}
 
             const progressBar = document.querySelector(".progress");
-        }
+        };
 
 
        

@@ -20,6 +20,7 @@
     <img id="cheeseimage" src="Cheese.jpg" alt="Image Of Cheese" style="display: block;">
     <img id="deadcheeseimage" src="Dead_Cheese.png" alt="Image Of Dead Cheese" style="display: none;">
     <h6>Ashish5513 - Wikimedia Commons - CC BY-SA 4.0</h6>
+    <h6>Sound Effect: DRAGON-STUDIO - Pixabay</h6>
 
     <br>
 
@@ -37,6 +38,7 @@
         function updateProgressBar(progressBar, value) {
             progressBar.querySelector(".progress__fill").style.width = `${progressBarValue}%`;
             progressBar.querySelector(".progress__text").textContent = `${progressBarValue}%`;
+            new Audio('Punch_Sound.mp3').play();
             progressBarValue = progressBarValue - 10;
 
             if(progressBarValue == -10){
