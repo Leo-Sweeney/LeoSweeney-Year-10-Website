@@ -15,9 +15,18 @@
     <script>
         let progressBarValue = 10;
 
-        if (document.addEventListener('keydown', (e) => {
-        addToProgressBar(progressBar, 10);
-        }));
+        const body = document.querySelector('body');
+
+        const buildCheese = (event) => {
+            console.log(event);
+
+            if(event.code == 'KeyE'){
+                console.log("HELLYEAHITWORKS!!!!!")
+                addToProgressBar(progressBar,10);
+            }
+        }
+
+        body.addEventListener('keypress', buildCheese);
 
         function addToProgressBar(progressBar, value) {
             progressBar.querySelector(".progress__fill").style.width = `${progressBarValue}%`;
@@ -34,7 +43,7 @@
             //    progressBarValue - 0.1;
             //}
 
-            const progressBar = document.querySelector(".progress");
+            //const progressBar = document.querySelector(".progress");
         };
 
 
