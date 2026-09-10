@@ -28,6 +28,8 @@
 
         body.addEventListener('keypress', buildCheese);
 
+        const progressBar = document.querySelector(".progress");
+
         function addToProgressBar(progressBar, value) {
             progressBar.querySelector(".progress__fill").style.width = `${progressBarValue}%`;
             progressBar.querySelector(".progress__text").textContent = `${progressBarValue}%`;
@@ -42,8 +44,6 @@
             //while(progressBarValue == 11) {
             //    progressBarValue - 0.1;
             //}
-
-            //const progressBar = document.querySelector(".progress");
         };
 
 
